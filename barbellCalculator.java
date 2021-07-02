@@ -15,8 +15,12 @@ public class barbellCalculator extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Barbell Calculator");
         setLayout(new GridBagLayout());
+
+
     }
     public static void main(String [] args) {
-
+        barbellCalculator calc = new BarbellCalculator();
+        calc.pack();
+        calc.setVisible(true);
     }
 }
