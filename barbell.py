@@ -8,16 +8,16 @@ class barbell(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-            self.hi_there = tk.Button(self)
-            self.hi_there["text"] = "Hello World\n(click me)"
-            self.hi_there["command"] = self.say_hi
-            self.hi_there.pack(side="top")
+        test = x
 
-            self.quit = tk.Button(self, text="QUIT", fg="red", command=self.master.destroy)
-            self.quit.pack(side="bottom")
-            
-    def say_hi(self):
-        print("hi there, everyone!")
+    def calculate(self):
+        fourFive = 45
+        threeFive = 35
+        twoFive = 25
+        oneFive = 15
+        ten = 10
+        five = 5
+        twoPointFive = 2.5
 
 root = tk.Tk()
 app = barbell(master=root)
