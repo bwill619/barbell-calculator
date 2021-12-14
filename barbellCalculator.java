@@ -11,7 +11,6 @@ import javax.swing.JTextField;
 public class barbellCalculator extends JFrame{
 
     final int mensBar = 45;
-    final int womensBar = 35;
     final double twoFive = 2.5;
     final double five = 5.0;
     final double ten = 10.0;
@@ -36,5 +35,27 @@ public class barbellCalculator extends JFrame{
         calc.setVisible(true);
     }
 
+    public double calculate(double input) {
+        double sum = 0;
+        double subtractBarbell = input - 45;
+        double sides = subtractBarbell / 2;
+
+        double fortyFives = sides / 45;
+        double thirtyFives = sides / 35;
+        double twentyFives = sides / 25;
+        double fifteens = sides / 15;
+        double tens = sides / 10;
+        double fives = sides / 5;
+        double twofives = sides / 2.5;
+
+        sides = sides - (45 * fortyFives);
+        if(fortyFives != 0) {
+            sum = fortyFives;
+        }
+
+
+
+        return sum;
+    }
      
 }
