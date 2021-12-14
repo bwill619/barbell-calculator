@@ -10,6 +10,18 @@ import javax.swing.JTextField;
 
 public class barbellCalculator extends JFrame{
 
+    final int mensBar = 45;
+    final int womensBar = 35;
+    final double twoFive = 2.5;
+    final double five = 5.0;
+    final double ten = 10.0;
+    final double fifteen = 15.0;
+    final double twentyFive = 25.0;
+    final double thrityFive = 35.0;
+    final double fortyFive = 45.0;
+
+    
+
     public barbellCalculator() {
         JFrame frame = new JFrame("Barbell Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,8 +31,10 @@ public class barbellCalculator extends JFrame{
 
     }
     public static void main(String [] args) {
-        barbellCalculator calc = new BarbellCalculator();
+        barbellCalculator calc = new barbellCalculator();
         calc.pack();
         calc.setVisible(true);
     }
+
+     
 }
