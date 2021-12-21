@@ -19,6 +19,14 @@ public class barbellCalculator extends JFrame{
     final double thrityFive = 35.0;
     final double fortyFive = 45.0;
 
+    private JLabel usd;
+    private JLabel eur;
+    private JButton convert;
+    private JButton convert2;
+    private JButton clear;
+    private JTextField input1;
+    private JTextField input2;
+
     
 
     public barbellCalculator() {
@@ -26,6 +34,12 @@ public class barbellCalculator extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Barbell Calculator");
         setLayout(new GridBagLayout());
+
+        //left components
+        GridBagConstraints leftSide = new GridBagConstraints();
+        leftSide.gridx = 0;
+        leftSide.gridy = 0;
+
         
 
 
@@ -34,10 +48,12 @@ public class barbellCalculator extends JFrame{
         barbellCalculator calc = new barbellCalculator();
         calc.pack();
         calc.setVisible(true);
+        System.out.println(calculate(225));
     }
 
-    public double calculate(double input) {
+    public static double calculate(double input) {
         double sum = 0;
+        String answer = "Plates";
         double subtractBarbell = input - 45;
         double sides = subtractBarbell / 2;
 
@@ -50,10 +66,12 @@ public class barbellCalculator extends JFrame{
         double twofives = sides / 2.5;
 
         sides = sides - (45 * fortyFives);
-        if(fortyFives != 0) {
-            sum = fortyFives;
-        }
-
+        sides = sides - (35 * thirtyFives);
+        sides = sides - (25 * twentyFives);
+        sides = sides - (15 * fifteens);
+        sides = sides - (10 * tens);
+        sides = sides - (5 * fives);
+        sides = sides - (2.5 * twofives);
 
 
         return sum;
