@@ -24,8 +24,8 @@ public class barbellCalculator extends JFrame{
     private JButton convert;
     private JButton convert2;
     private JButton clear;
-    private JTextField input1;
-    private JTextField input2;
+    private JTextField textInput1;
+    private JTextField textInput2;
 
     
 
@@ -40,6 +40,8 @@ public class barbellCalculator extends JFrame{
         leftSide.gridx = 0;
         leftSide.gridy = 0;
 
+
+
         
 
 
@@ -51,9 +53,9 @@ public class barbellCalculator extends JFrame{
         System.out.println(calculate(225));
     }
 
-    public static double calculate(double input) {
+    public static String calculate(double input) {
         double sum = 0;
-        String answer = "Plates";
+        String answer = "You need: ";
         double subtractBarbell = input - 45;
         double sides = subtractBarbell / 2;
 
@@ -65,16 +67,9 @@ public class barbellCalculator extends JFrame{
         double fives = sides / 5;
         double twofives = sides / 2.5;
 
-        sides = sides - (45 * fortyFives);
-        sides = sides - (35 * thirtyFives);
-        sides = sides - (25 * twentyFives);
-        sides = sides - (15 * fifteens);
-        sides = sides - (10 * tens);
-        sides = sides - (5 * fives);
-        sides = sides - (2.5 * twofives);
 
 
-        return sum;
+        return answer;
     }
      
 }
