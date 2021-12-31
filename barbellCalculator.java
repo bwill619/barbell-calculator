@@ -19,13 +19,11 @@ public class barbellCalculator extends JFrame{
     final double thrityFive = 35.0;
     final double fortyFive = 45.0;
 
-    private JLabel usd;
-    private JLabel eur;
-    private JButton convert;
-    private JButton convert2;
-    private JButton clear;
+
+    private JButton plateButton;
     private JTextField textInput1;
-    private JTextField textInput2;
+    private JLabel resultLabel;
+
 
     
 
@@ -39,6 +37,26 @@ public class barbellCalculator extends JFrame{
         GridBagConstraints leftSide = new GridBagConstraints();
         leftSide.gridx = 0;
         leftSide.gridy = 0;
+        textInput1 = new JTextField(10);
+
+        //middle components
+        GridBagConstraints middle = new GridBagConstraints();
+        middle.gridx = 1;
+        middle.gridy = 0;
+        plateButton = new JButton("Calculate");
+
+        plateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double d1 = Double.parseDouble(textInput1.getText());
+                String sum = calculate(d1);
+                resultLabel.setText(sum);
+            }
+        });
+
+        add(textInput1, leftSide);
+        add(plateButton, middle);
+
 
 
 
