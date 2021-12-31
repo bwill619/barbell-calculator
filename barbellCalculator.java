@@ -54,8 +54,16 @@ public class barbellCalculator extends JFrame{
             }
         });
 
+        //middle components 2
+        GridBagConstraints middle2 = new GridBagConstraints();
+        middle2.gridx = 0;
+        middle2.gridy = -2;
+        resultLabel = new JLabel("Barbell Calculator");
+
+
         add(textInput1, leftSide);
         add(plateButton, middle);
+        add(resultLabel, middle2);
 
 
 
