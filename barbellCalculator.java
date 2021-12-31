@@ -76,24 +76,21 @@ public class barbellCalculator extends JFrame{
         barbellCalculator calc = new barbellCalculator();
         calc.pack();
         calc.setVisible(true);
-        System.out.println(calculate(225));
     }
 
+
+
     public static String calculate(double input) {
-        double sum = 0;
         String answer = "You need: ";
         double subtractBarbell = input - 45;
         double sides = subtractBarbell / 2;
-
-        double fortyFives = sides / 45;
-        double thirtyFives = sides / 35;
-        double twentyFives = sides / 25;
-        double fifteens = sides / 15;
-        double tens = sides / 10;
-        double fives = sides / 5;
-        double twofives = sides / 2.5;
+        double sum = 0;
 
 
+        while (input > 2) {
+            sum = subtractBarbell / 45;
+            answer = answer + sum;
+        }
 
         return answer;
     }
