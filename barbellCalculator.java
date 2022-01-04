@@ -76,7 +76,7 @@ public class barbellCalculator extends JFrame{
         barbellCalculator calc = new barbellCalculator();
         calc.pack();
         calc.setVisible(true);
-        System.out.println(calculate(225));
+        System.out.println(calculate(190));
     }
 
 
