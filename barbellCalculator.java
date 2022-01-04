@@ -49,7 +49,7 @@ public class barbellCalculator extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 double d1 = Double.parseDouble(textInput1.getText());
-                String sum = calculate(d1);
+                String sum = calculate((int)d1);
                 resultLabel.setText(sum);
             }
         });
@@ -81,17 +81,17 @@ public class barbellCalculator extends JFrame{
 
 
 
-    public static String calculate(double input) {
+    public static String calculate(int input) {
         String answer = "You need: ";
-        double subtractBarbell = input - 45;
-        double sides = subtractBarbell / 2;
-        double fortyFives = sides / 45;
-        double thirtyFives = sides / 35;
-        double twentyFives = sides/ 25;
-        double fifteens = sides / 15;
-        double tens = sides / 10;
-        double fives = sides / 5;
-        double twoFives = sides / 2.5;
+        int subtractBarbell = input - 45;
+        int sides = subtractBarbell / 2;
+        int fortyFives = sides / 45;
+        int thirtyFives = sides / 35;
+        int twentyFives = sides/ 25;
+        int fifteens = sides / 15;
+        int tens = sides / 10;
+        int fives = sides / 5;
+        int twoFives = (int) (sides / 2.5);
 
         if(input > 0) {
             sides = sides - (45 * fortyFives);
@@ -124,7 +124,7 @@ public class barbellCalculator extends JFrame{
                 answer = answer + tens + " 5 lb plates, ";
             }
 
-            sides = sides - (2.5 * twoFives);
+            sides = sides - (int) (2.5 * twoFives);
             if(twoFives != 0) {
                 answer = answer + twoFives + " 2.5 lb plates, ";
             }
