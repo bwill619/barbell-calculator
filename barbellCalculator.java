@@ -76,6 +76,7 @@ public class barbellCalculator extends JFrame{
         barbellCalculator calc = new barbellCalculator();
         calc.pack();
         calc.setVisible(true);
+        System.out.println(calculate(225));
     }
 
 
@@ -84,7 +85,6 @@ public class barbellCalculator extends JFrame{
         String answer = "You need: ";
         double subtractBarbell = input - 45;
         double sides = subtractBarbell / 2;
-        double sum = 0;
         double fortyFives = sides / 45;
         double thirtyFives = sides / 35;
         double twentyFives = sides/ 25;
@@ -96,37 +96,37 @@ public class barbellCalculator extends JFrame{
         if(input > 0) {
             sides = sides - (45 * fortyFives);
             if(fortyFives != 0) {
-                answer = answer + fortyFives + " plates, ";
+                answer = answer + fortyFives + " 45 lb plates, ";
             }
 
             sides = sides - (35 * thirtyFives);
             if(thirtyFives != 0) {
-                answer = answer + thirtyFives + " plates, ";
+                answer = answer + thirtyFives + " 35 lb plates, ";
             }
 
             sides = sides - (25 * twentyFives);
             if(twentyFives != 0) {
-                answer = answer + twentyFives + " plates, ";
+                answer = answer + twentyFives + " 25 lb plates, ";
             }
 
             sides = sides - (15 * fifteens);
             if(fifteens != 0) {
-                answer = answer + fifteens + " plates, ";
+                answer = answer + fifteens + " 15 lb plates, ";
             }
 
             sides = sides - (10 * tens);
             if(tens != 0) {
-                answer = answer + tens + " plates, ";
+                answer = answer + tens + " 10 lb plates, ";
             }
 
             sides = sides - (5 * fives);
             if(fives != 0) {
-                answer = answer + tens + " plates, ";
+                answer = answer + tens + " 5 lb plates, ";
             }
 
             sides = sides - (2.5 * twoFives);
             if(twoFives != 0) {
-                answer = answer + twoFives + " plates, ";
+                answer = answer + twoFives + " 2.5 lb plates, ";
             }
         }
         else {
