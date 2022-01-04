@@ -85,11 +85,52 @@ public class barbellCalculator extends JFrame{
         double subtractBarbell = input - 45;
         double sides = subtractBarbell / 2;
         double sum = 0;
+        double fortyFives = sides / 45;
+        double thirtyFives = sides / 35;
+        double twentyFives = sides/ 25;
+        double fifteens = sides / 15;
+        double tens = sides / 10;
+        double fives = sides / 5;
+        double twoFives = sides / 2.5;
 
+        if(input > 0) {
+            sides = sides - (45 * fortyFives);
+            if(fortyFives != 0) {
+                answer = answer + fortyFives + " plates, ";
+            }
 
-        while (input > 2) {
-            sum = subtractBarbell / 45;
-            answer = answer + sum;
+            sides = sides - (35 * thirtyFives);
+            if(thirtyFives != 0) {
+                answer = answer + thirtyFives + " plates, ";
+            }
+
+            sides = sides - (25 * twentyFives);
+            if(twentyFives != 0) {
+                answer = answer + twentyFives + " plates, ";
+            }
+
+            sides = sides - (15 * fifteens);
+            if(fifteens != 0) {
+                answer = answer + fifteens + " plates, ";
+            }
+
+            sides = sides - (10 * tens);
+            if(tens != 0) {
+                answer = answer + tens + " plates, ";
+            }
+
+            sides = sides - (5 * fives);
+            if(fives != 0) {
+                answer = answer + tens + " plates, ";
+            }
+
+            sides = sides - (2.5 * twoFives);
+            if(twoFives != 0) {
+                answer = answer + twoFives + " plates, ";
+            }
+        }
+        else {
+            answer = "ERROR! ENTER POSITIVE NUMBER DIVISIBLE BY 5";
         }
 
         return answer;
